@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class App {
     @SuppressWarnings("unused")
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Scanner obj = new Scanner(System.in);
         int[][] board = new int[9][9];
         int choice = obj.nextInt();

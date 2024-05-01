@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class Sudoku {
     private final int N = 9;
-    private int[][] sudoku;
+    private final int[][] sudoku;
 
     Sudoku(int[][] sudoku) {
         this.sudoku = sudoku;
@@ -14,14 +14,17 @@ public class Sudoku {
     }
 
     private void print() {
-        Arrays.stream(sudoku).forEach(row->{Arrays.stream(row).forEach(i -> System.out.print(i+"\t"));System.out.print("\n");});
+        Arrays.stream(sudoku).forEach(row -> {
+            Arrays.stream(row).forEach(i -> System.out.print(i + "\t"));
+            System.out.print("\n");
+        });
     }
 
     private boolean solve() {
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 if (sudoku[i][j] == 0) {
-                    for (int num = 1; num <= 9; num++) {
+                    for (int num = 1; num <= N; num++) {
                         if (isSafe(i, j, num)) {
                             sudoku[i][j] = num;
                             if (solve())
@@ -60,4 +63,5 @@ public class Sudoku {
         }
         return true;
     }
+
 }

@@ -1,6 +1,8 @@
+import java.util.Arrays;
+
 public class Sudoku {
-    final int N = 9;
-    int[][] sudoku;
+    private final int N = 9;
+    private int[][] sudoku;
 
     Sudoku(int[][] sudoku) {
         this.sudoku = sudoku;
@@ -12,12 +14,7 @@ public class Sudoku {
     }
 
     private void print() {
-        for (int[] row : sudoku) {
-            for (int i : row) {
-                System.out.print(i + " ");
-            }
-            System.out.println();
-        }
+        Arrays.stream(sudoku).forEach(row->{Arrays.stream(row).forEach(i -> System.out.print(i+"\t"));System.out.print("\n");});
     }
 
     private boolean solve() {

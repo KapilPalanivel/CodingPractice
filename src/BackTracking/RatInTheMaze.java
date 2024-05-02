@@ -1,3 +1,5 @@
+package BackTracking;
+
 import java.util.Scanner;
 
 public class RatInTheMaze {
@@ -6,7 +8,7 @@ public class RatInTheMaze {
     private boolean[][] visit;
 
     @SuppressWarnings("resource")
-    RatInTheMaze() {
+    public RatInTheMaze() {
         Scanner obj = new Scanner(System.in);
         System.out.print("Enter the rows and columns:");
         this.m = obj.nextInt();

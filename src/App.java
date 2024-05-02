@@ -1,3 +1,5 @@
+import BackTracking.*;
+
 import java.util.Scanner;
 
 public class App {
@@ -25,6 +27,8 @@ public class App {
                 for(int i=0;i<9;i++) for(int j=0;j<9;j++) board[i][j]=obj.nextInt();
                 new Sudoku(board);
                 break;
+            case 7:
+                new Djikstra();
             default:
                 System.out.println("Wrong Input");
                 break;

@@ -1,10 +1,12 @@
+package BackTracking;
+
 import java.util.Arrays;
 
 public class Sudoku {
     private final int N = 9;
     private final int[][] sudoku;
 
-    Sudoku(int[][] sudoku) {
+    public Sudoku(int[][] sudoku) {
         this.sudoku = sudoku;
         if (!solve())
             System.out.println("No Solution Exist");
@@ -32,11 +34,11 @@ public class Sudoku {
                             sudoku[i][j] = 0;
                         }
                     }
-                    return false; // If no number is valid, backtrack
+                    return false;
                 }
             }
         }
-        return true; // If no empty cell found, the puzzle is solved
+        return true;
     }
 
     private boolean isSafe(int row, int col, int num) {
@@ -46,13 +48,11 @@ public class Sudoku {
                 return false;
         }
 
-        // Check the column
         for (int i = 0; i < N; i++) {
             if (sudoku[i][col] == num)
                 return false;
         }
 
-        // Check the 3x3 subgrid
         int startRow = row - row % 3;
         int startCol = col - col % 3;
         for (int r = 0; r < 3; r++) {

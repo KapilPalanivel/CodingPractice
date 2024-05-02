@@ -1,3 +1,5 @@
+package BackTracking;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -6,7 +8,7 @@ public class HamiltonCycle {
     int N;
     int[][] matrix;
     int[] path;
-    HamiltonCycle()
+    public HamiltonCycle()
     {
         Scanner obj=new Scanner(System.in);
         N=obj.nextInt();

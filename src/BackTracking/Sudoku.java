@@ -42,7 +42,6 @@ public class Sudoku {
     }
 
     private boolean isSafe(int row, int col, int num) {
-        // Check the row
         for (int i = 0; i < N; i++) {
             if (sudoku[row][i] == num)
                 return false;

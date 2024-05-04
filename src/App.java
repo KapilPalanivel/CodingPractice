@@ -28,7 +28,10 @@ public class App {
                 new Sudoku(board);
                 break;
             case 7:
-                new Djikstra();
+                new Djikstra(obj);
+            case 8:
+                new Lrgst_rect_In_hist(obj);
+                break;
             default:
                 System.out.println("Wrong Input");
                 break;

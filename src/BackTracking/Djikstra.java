@@ -8,8 +8,7 @@ public class Djikstra {
     int[] dist;
     boolean[] set = new boolean[N];
 
-    public Djikstra() {
-        Scanner obj = new Scanner(System.in);
+    public Djikstra(Scanner obj) {
         N = obj.nextInt();
         graph = new int[N][N];
         for (int i = 0; i < N; i++) for (int j = 0; j < N; j++) graph[i][j] = obj.nextInt();
@@ -26,8 +25,8 @@ public class Djikstra {
             set[temp] = true;
 
             for (int k = 0; k < N; k++) {
-                if (!set[i] && graph[temp][i] != 0 && dist[temp]!=Integer.MAX_VALUE && dist[temp]+graph[temp][i] < dist[0] )
-                    dist[i]=dist[temp]+graph[temp][i];
+                if (!set[i] && graph[temp][i] != 0 && dist[temp] != Integer.MAX_VALUE && dist[temp] + graph[temp][i] < dist[0])
+                    dist[i] = dist[temp] + graph[temp][i];
             }
         }
         printGraph();
@@ -35,9 +34,8 @@ public class Djikstra {
 
     private void printGraph() {
         System.out.println("Vertex \t Distance From Source");
-        for(int i=0;i<N;i++)
-        {
-            System.out.println(i+" \t\t "+dist[i]);
+        for (int i = 0; i < N; i++) {
+            System.out.println(i + " \t\t " + dist[i]);
         }
     }
 

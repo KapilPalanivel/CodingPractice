@@ -36,6 +36,9 @@ public class App {
             case 9:
                 new Generate_permutation_BST(obj);
                 break;
+            case 10:
+                new Parantesis_Permutaion(obj);
+                break;
             default:
                 System.out.println("Wrong Input");
                 break;

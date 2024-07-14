@@ -29,8 +29,12 @@ public class App {
                 break;
             case 7:
                 new Djikstra(obj);
+                break;
             case 8:
                 new Lrgst_rect_In_hist(obj);
+                break;
+            case 9:
+                new Generate_permutation_BST(obj);
                 break;
             default:
                 System.out.println("Wrong Input");

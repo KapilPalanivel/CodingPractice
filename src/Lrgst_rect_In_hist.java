@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 public class Lrgst_rect_In_hist {
-    private int N, heights[];
+    private final int N;
+    private final int[] heights;
 
     public Lrgst_rect_In_hist(Scanner obj) {
         N = obj.nextInt();
